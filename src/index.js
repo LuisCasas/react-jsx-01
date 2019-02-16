@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Comment from './components/Comment';
 import faker from 'faker';
+import ApprovalCard from './components/ApprovalCard';
+import Comment from './components/Comment';
+
+
 
 const entries = [{
     author: 'Mike',
@@ -25,25 +28,32 @@ const App = () => {
     return (
         <div className="ui container comments">
             
-            <Comment 
-                author={entries[0].author} 
-                time={entries[0].time} 
-                comment={entries[0].comment} 
-                avatar={entries[0].avatar} 
-            />
-            <Comment 
-                author={entries[1].author} 
-                time={entries[1].time} 
-                comment={entries[1].comment} 
-                avatar={entries[1].avatar} 
-            />
-            <Comment 
-                author={entries[2].author} 
-                time={entries[2].time} 
-                comment={entries[2].comment} 
-                avatar={entries[2].avatar} 
-            />
-               
+            <ApprovalCard>
+                <Comment 
+                    author={entries[0].author} 
+                    time={entries[0].time} 
+                    comment={entries[0].comment} 
+                    avatar={entries[0].avatar} 
+                />
+            </ApprovalCard>
+
+            <ApprovalCard>
+                <Comment 
+                    author={entries[1].author} 
+                    time={entries[1].time} 
+                    comment={entries[1].comment} 
+                    avatar={entries[1].avatar} 
+                />
+            </ApprovalCard>
+
+            <ApprovalCard>
+                <Comment 
+                    author={entries[2].author} 
+                    time={entries[2].time} 
+                    comment={entries[2].comment} 
+                    avatar={entries[2].avatar} 
+                />
+            </ApprovalCard>
         </div>
     );
 };
