@@ -24,18 +24,26 @@ const App = () => {
 
     return (
         <div className="ui container comments">
-            {
-                entries.forEach((entry) => {
-                    return (
-                            <Comment 
-                            author={entry.author} 
-                            time={entry.time} 
-                            comment={entry.comment} 
-                            avatar={entry.avatar} 
-                        />
-                    );
-                })
-            }
+            
+            <Comment 
+                author={entries[0].author} 
+                time={entries[0].time} 
+                comment={entries[0].comment} 
+                avatar={entries[0].avatar} 
+            />
+            <Comment 
+                author={entries[1].author} 
+                time={entries[1].time} 
+                comment={entries[1].comment} 
+                avatar={entries[1].avatar} 
+            />
+            <Comment 
+                author={entries[2].author} 
+                time={entries[2].time} 
+                comment={entries[2].comment} 
+                avatar={entries[2].avatar} 
+            />
+               
         </div>
     );
 };
